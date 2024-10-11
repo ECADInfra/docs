@@ -23,7 +23,6 @@ Our nodes allow access to the following RPC paths. If you require additional RPC
 - `/chains/<chain_id>/blocks/<block_id>/context/contracts/<contract_id>`
 - `/chains/<chain_id>/blocks/<block_id>/context/delegates/<delegate_id>`
 - `/chains/<chain_id>/blocks/<block_id>/context/total_supply`
-- `/chains/<chain_id>/blocks/<block_id>/context/issuance`
 - `/chains/<chain_id>/blocks/<block_id>/context/nonces/<nonce_id>`
 - `/chains/<chain_id>/blocks/<block_id>/context/liquidity_baking/<lb_id>`
 
