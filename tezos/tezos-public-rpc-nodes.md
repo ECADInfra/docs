@@ -43,8 +43,6 @@ Our nodes allow access to the following RPC paths. If you require additional RPC
 
 #### Network and Version Information:
 - `/network/stat`
-- `/network/version`
-- `/network/versions`
 
 #### Mempool Information:
 - `/chains/<chain_id>/mempool/filter`
