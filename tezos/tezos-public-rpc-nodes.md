@@ -5,8 +5,8 @@ We provide free access to public Tezos RPC nodes for both **Mainnet** and **Ghos
 
 ## Available RPC Endpoints
 Our nodes can be accessed at the following endpoints:
-- **Mainnet:** `https://mainnet.ecadinfra.com/`
-- **Ghostnet:** `https://Ghostnet.ecadinfra.com/`
+- **Mainnet:** `https://mainnet.tezos.ecadinfra.com/`
+- **Ghostnet:** `https://ghostnet.tezos.ecadinfra.com/`
 
 Our nodes allow access to the following RPC paths. If you require additional RPC paths, feel free to contact us at [ops@ecadlabs.com](mailto:ops@ecadlabs.com), and we will do our best to accommodate your needs.
 
