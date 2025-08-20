@@ -24,7 +24,6 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 
 #### **Phase 1: Initial Degradation (23:15-00:30 UTC / 16:15-17:30 PDT)**
 - **23:15 UTC / 16:15 PDT**: Consensus performance degradation begins
-- **23:15-00:30 UTC / 16:15-17:30 PDT**: Increasing missed blocks and high consensus "Timed out" message durations
 - **Impact**: Blocks were missed during this period
 
 #### **Phase 2: Service Restart (00:30-00:35 UTC / 17:30-17:35 PDT)**
@@ -34,16 +33,9 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 - **00:33:24-00:35:40 UTC / 17:33:24-17:35:40 PDT**: Peer connection rebuilding
 
 #### **Phase 3: Continued Degradation (00:35-02:43 UTC / 17:35-19:43 PDT)**
-- **00:35-02:43 UTC / 17:35-19:43 PDT**: Consensus "Timed out" messages continue with high durations
 - **02:43 UTC / 19:43 PDT**: Issue resolves naturally without intervention
 
 ### Evidence from Logs
-
-#### **Consensus "Timed out" Message Analysis**
-- **Total "Timed out" Messages**: 2,374 over ~2 hours 13 minutes
-- **Duration Pattern**: Consistently high (~4150-4170ms) with no variation
-- **Consensus Step**: 99% RoundStepNewHeight, 1% other steps
-- **Log Reference**: `celestia-second-incident-sanitized.log` lines 1-19,979
 
 #### **Service Restart Confirmation**
 - **Planned Restart**: Mass peer disconnection at 00:33:02 UTC / 17:33:02 PDT
@@ -92,7 +84,6 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 - **Multiple Validators Affected**: 47 missing validators indicates distributed problem
 - **Synchronized Performance**: Multiple validators hitting 10-12 second block times simultaneously
 - **Natural Resolution**: Issue resolved at 02:43 UTC / 19:43 PDT without local intervention
-- **Log Pattern**: Consistent high timeout durations suggest network coordination issues
 
 **Why This Makes Sense:**
 - 47 missing validators represents a substantial portion of the network
@@ -127,7 +118,6 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 #### **Phase 1: Initial Degradation (15:25-17:54 UTC / 08:25-10:54 PDT)**
 - **15:25 UTC / 08:25 PDT**: First consensus "Timed out" messages with abnormally high durations begin
 - **15:30 UTC / 08:30 PDT**: Service degradation becomes noticeable, missed blocks detected
-- **15:30-17:54 UTC / 08:30-10:54 PDT**: Continuous consensus "Timed out" messages with durations ~4150-4170ms
 - **Impact**: Blocks were missed during this period
 
 #### **Phase 2: Service Upgrade (17:54-17:55 UTC / 10:54-10:55 PDT)**
@@ -136,16 +126,9 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 - **17:55 UTC / 10:55 PDT**: New process started with PID 1626644
 
 #### **Phase 3: Post-Upgrade Recovery (17:55-18:00 UTC / 10:55-11:00 PDT)**
-- **17:55+ UTC / 10:55+ PDT**: Consensus "Timed out" message durations reduced from ~4170ms to ~4155ms
 - **18:00 UTC / 11:00 PDT**: Service stabilized, no further missed blocks until second incident
 
 ### Evidence from Logs
-
-#### **Consensus "Timed out" Message Analysis**
-- **Total "Timed out" Messages**: 1,824 over ~2.5 hours
-- **Duration Pattern**: Consistently high (~4150-4170ms) with no variation
-- **Consensus Step**: 100% RoundStepNewHeight
-- **Log Reference**: `celestia-first-incident-sanitized.log` lines 1-15,980
 
 #### **Service Upgrade Confirmation**
 - **Termination Signal**: "signal=terminated" at 17:55:08 UTC / 10:55:08 PDT
@@ -204,7 +187,6 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 
 #### **Resolution Mechanism: Fresh Peer Connections**
 **Evidence Supporting This:**
-- **Immediate Improvement**: Timeout durations reduced from ~4170ms to ~4155ms
 - **Service Restart**: Clean process restart established new peer connections
 - **Network Stabilization**: Service stabilized after establishing connections to updated peers
 
@@ -219,19 +201,6 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 ## TECHNICAL ANALYSIS
 
 ### Common Patterns Across Both Incidents
-
-#### **Consensus "Timed out" Message Characteristics**
-- **Message Type**: INFO level "Timed out" messages (normal consensus operation)
-- **Duration Pattern**: Abnormally high values (~4150-4170ms) with no variation
-- **Consensus Step**: Primarily RoundStepNewHeight
-- **Frequency**: Similar to normal operation (~700-900 per hour)
-- **Important Note**: These are "Timed out" messages (with space), not "timeout" errors - the issue is the duration values, not the message frequency
-
-#### **Key Distinction: Normal vs. Incident**
-- **Normal Operation**: Healthy duration variation (1000ms to 4169ms)
-- **Incident Periods**: Only high durations (4150-4170ms) with no variation
-- **Conclusion**: The issue was **lack of duration variation**, not timeout frequency
-- **Critical Insight**: The "Timed out" messages themselves are normal - the problem is the abnormally high and consistent duration values, suggesting consensus timing coordination issues
 
 ### Evidence Supporting Distributed Issues
 
@@ -310,25 +279,6 @@ This report documents two distinct incidents that occurred on August 18-19, 2025
 2. **Peer Monitoring**: Enhanced peer connection stability monitoring
 3. **Incident Response**: Document response procedures for similar issues
 
-#### **Long Term**
-1. **Community Coordination**: Establish communication channels with other validators
-2. **Predictive Monitoring**: Develop early warning systems for consensus issues
-3. **Network Health**: Participate in distributed health monitoring initiatives
-
-### For the Celestia Community
-
-#### **Network Coordination**
-1. **Version Rollouts**: Coordinate major version updates to minimize network instability
-2. **Incident Communication**: Establish protocols for sharing incident information
-3. **Health Monitoring**: Implement cross-validator health monitoring
-
-#### **Technical Improvements**
-1. **Consensus Timing**: Investigate causes of abnormally high timeout durations
-2. **Message Terminology**: Clarify the distinction between "Timed out" (normal) and "timeout" (error) messages in consensus logs
-3. **Duration Analysis**: Investigate whether abnormally high duration values in "Timed out" messages indicate underlying consensus timing coordination issues
-4. **Peer Management**: Improve peer connection stability during network transitions
-5. **Performance Metrics**: Standardize consensus performance monitoring across validators
-
 ---
 
 ## CONCLUSION
@@ -338,8 +288,6 @@ Both incidents on August 18-19, 2025, were characterized by distributed consensu
 **Key Takeaways:**
 1. **Distributed Issues**: Consensus problems can affect multiple validators simultaneously
 2. **Monitoring Value**: Prometheus metrics enabled early detection and informed responses
-3. **Proactive Response**: Timely upgrades and restarts can resolve coordination issues
-4. **Community Coordination**: Major version updates benefit from coordinated rollout
 
 **Incident Resolution:**
 - **First Incident**: Resolved by v5.0.2 upgrade and fresh peer connections
@@ -373,8 +321,6 @@ This analysis demonstrates the importance of comprehensive monitoring, data-driv
 - **Current Stable Operation**: 02:50 UTC / 19:50 PDT (August 19) onwards
 
 ### Appendix D: Technical Details
-- **Consensus "Timed out" Messages**: Normal INFO level messages (with space), not "timeout" errors
 - **Duration Patterns**: Normal variation vs. incident consistency
 - **Peer Stability**: Infrastructure remained stable throughout
 - **Network Impact**: Both incidents affected multiple validators simultaneously
-- **Potential Investigation Area**: The distinction between "Timed out" (normal) and "timeout" (error) messages and whether duration values indicate underlying consensus timing issues

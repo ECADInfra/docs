@@ -20,11 +20,6 @@ This directory contains all documentation, analysis, and evidence related to the
 ### Primary Documentation
 - **[celestia-validator-incident-2025-08-18.md](celestia-validator-incident-2025-08-18.md)** - Comprehensive incident report with UTC time conversions
 
-### Log Files (Sanitized)
-- **celestia-first-incident-sanitized.log** - First incident logs (15,980 lines)
-- **celestia-second-incident-sanitized.log** - Second incident logs (19,979 lines)
-- **celestia-appd-last-30m-sanitized.log** - Normal operation baseline (2,786 lines)
-
 ### Analysis Files
 - **celestia-errors-categorized.log** - Categorized error analysis
 - **celestia-errors-summary.log** - Error summary
@@ -38,9 +33,6 @@ This directory contains all documentation, analysis, and evidence related to the
 5. **Resolution**: First incident resolved by v5.0.2 upgrade, second by natural network recovery
 
 ## Technical Details
-
-- **Consensus Messages**: Normal INFO level "Timed out" messages (with space)
-- **Duration Pattern**: Normal operation shows variation (1000ms to 4169ms), incidents show only high values (4150-4170ms)
 - **Network Impact**: Up to 47 missing validators during peak periods
 - **Monitoring**: Prometheus metrics enabled early detection and data-driven responses
 
