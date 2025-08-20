@@ -1,0 +1,81 @@
+  44 ERR failed to process message err="error adding vote" height=7043753 module=consensus msg_type=*consensus.VoteMessage peer=d2faee0c04be9a813223db1491c05843eaf4db9f round=0
+  12 ERR Stopping peer for error err="read tcp [INTERNAL_IP]
+  10 ERR error while stopping peer error="already stopped" module=p2p
+   4 ERR Error dialing peer err="auth failure
+   2 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{213.239.197.20
+   2 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{148.113.213.209
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{65.109.18.169
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{54.151.67.133
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{5.78.67.13
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{195.201.130.235
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{195.14.6.129
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{189.1.170.86
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{169.155.169.39
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{148.72.141.245
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{139.59.207.97
+   1 ERR Stopping peer for error err=EOF module=p2p peer="Peer{MConn{135.181.5.219
+   1 ERR Stopping peer for error err="pong timeout" module=p2p peer="Peer{MConn{88.198.63.176
+   1 ERR Stopping peer for error err="message exceeds max size (12261 > 1034)" module=p2p peer="Peer{MConn{49.12.92.82
+   1 ERR Stopping peer for error err="message exceeds max size (102410 > 1034)" module=p2p peer="Peer{MConn{49.12.92.82
+   1 ERR Stopped accept routine, as transport is closed module=p2p numPeers=0
+   1 ERR snapshot failed; exporter error err="iavl export failed for version 7044000
+   1 ERR SendTimeout module=blocksync peer=396673f9d0559a2ec8b44016ef591dee96831989 reason="peer did not send us anything" timeout=15000
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=f94804b1c70f3d3dba6c8355d2a938ab9c719f2a@217.28.48.238
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=f588002d4625e2eb4476ae8fc7ad43ae0e0d5669@185.183.35.22
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=f36eea7c227899c6f6057a644484dcc51c04aa77@8.52.201.252
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=d535cbf8d0efd9100649aa3f53cb5cbab33ef2d6@8.52.196.100
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=be4dc36b092285eabc52bf3f886a6160b4971a6b@109.228.61.221
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=bcd9c1257d2f6f7c539a14dab2cfa92c44de2f11@23.227.221.97
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=bb0a93138487c3945b40327dd4dc8b97b1d627ad@64.130.52.134
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=a53d32ac33aa5ba110a5d8c924c153d5a7efed9e@95.217.77.229
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=a3ce5d5756730df432424594aff979a7a5ac5c62@190.2.132.131
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=a37349f8fc8e5a9c0963837b9341f728bb128eb8@64.31.14.6
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=9d4afca92c2d6e681d3605ae25cb1817620a9604@35.195.100.59
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=97ce01235d297362da3367f24babaa4df77729b8@23.158.40.230
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=908f49878376bd9fe78cf0ed91b51b6717418aa6@146.70.243.171
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=84201b8a7667a089887b25737cbf1b38d6cae4e7@213.244.249.26
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=71fa05f1ff6031224c4c175e03a3a9f5ed560158@38.58.176.180
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=6ee545c2992a8201ce2ed68d73776695627595db@168.119.37.164
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=63e4bb93ae34fdf3b0efb48071a102f1bcbb83e9@54.220.166.232
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=5c2cd4773fc6582a56038bf2932f816f3eb564be@37.27.123.68
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=47e521b6089caf796dfa9c0d2423f66a4bd28f6e@185.44.207.247
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=46c4dca5705b7fb55a56f942b87052ee3fd2ced9@69.10.38.42
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=40525a60a25ccaa7a2685acd058c4c7d3d9f95c5@144.76.115.182
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=217bd0e9fb6ed289a44c5ad7d95ee62becaccb1c@169.155.169.214
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=1fcfc74c1d32a49a59d545f23d3da838eb94dcc3@185.135.81.50
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=194afcb88bd954fc4365f392c09da62c41638e15@13.215.96.206
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=14ce58c5df6ae3e410e8b0afe92e84e4681c897b@77.68.83.133
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=129f31ae84d154b3064fa7928ec9a04cad0a40cc@95.216.246.249
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=1217edc58de2e2838d3af19af9a506ffee2cff68@88.211.218.239
+   1 ERR Failed to reconnect to peer. Beginning exponential backoff addr=117eef2a9089dd4d7f48720da03ec63bd818136c@135.125.189.59
+   1 ERR failed to add block err="got an already committed block #7044130 (possibly from the slow peer 396673f9d0559a2ec8b44016ef591dee96831989)" module=blocksync peer="Peer{MConn{148.251.13.186
+   1 ERR failed to add block err="got an already committed block #7044129 (possibly from the slow peer 396673f9d0559a2ec8b44016ef591dee96831989)" module=blocksync peer="Peer{MConn{148.251.13.186
+   1 ERR Error stopping pool err="already stopped" module=blocksync
+   1 ERR Error stopping connection err="already stopped" module=p2p peer=162f4a82ae3d50edc4c09d23d29f3add6d203423@88.198.63.176
+   1 ERR Error serving server err="accept tcp [LOCALHOST]
+   1 ERR Error dialing peer err="dial tcp 95.217.77.229
+   1 ERR Error dialing peer err="dial tcp 95.216.246.249
+   1 ERR Error dialing peer err="dial tcp 88.211.218.239
+   1 ERR Error dialing peer err="dial tcp 8.52.196.100
+   1 ERR Error dialing peer err="dial tcp 77.68.83.133
+   1 ERR Error dialing peer err="dial tcp 69.10.38.42
+   1 ERR Error dialing peer err="dial tcp 64.31.14.6
+   1 ERR Error dialing peer err="dial tcp 64.130.52.134
+   1 ERR Error dialing peer err="dial tcp 54.220.166.232
+   1 ERR Error dialing peer err="dial tcp 38.58.176.180
+   1 ERR Error dialing peer err="dial tcp 37.27.123.68
+   1 ERR Error dialing peer err="dial tcp 35.195.100.59
+   1 ERR Error dialing peer err="dial tcp 23.227.221.97
+   1 ERR Error dialing peer err="dial tcp 23.158.40.230
+   1 ERR Error dialing peer err="dial tcp 213.244.249.26
+   1 ERR Error dialing peer err="dial tcp 190.2.132.131
+   1 ERR Error dialing peer err="dial tcp 185.44.207.247
+   1 ERR Error dialing peer err="dial tcp 185.183.35.22
+   1 ERR Error dialing peer err="dial tcp 169.155.169.214
+   1 ERR Error dialing peer err="dial tcp 168.119.37.164
+   1 ERR Error dialing peer err="dial tcp 146.70.243.171
+   1 ERR Error dialing peer err="dial tcp 144.76.115.182
+   1 ERR Error dialing peer err="dial tcp 135.125.189.59
+   1 ERR Error dialing peer err="dial tcp 13.215.96.206
+   1 ERR Connection failed @ sendRoutine conn=MConn{88.198.63.176
+   1 ERR canceled grpc subscription. retrying module=rpc

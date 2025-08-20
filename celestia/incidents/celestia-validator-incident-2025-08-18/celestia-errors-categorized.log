@@ -1,0 +1,48 @@
+=== CELESTIA VALIDATOR ERROR ANALYSIS ===
+
+1. CONSENSUS ERRORS (Most Common)
+=================================
+3563:Aug 18 17:00:44 [VALIDATOR_NODE] celestia-appd[1626644]: 5:00PM ERR failed to process message err="error adding vote" height=7043753 module=consensus msg_type=*consensus.VoteMessage peer=d2faee0c04be9a813223db1491c05843eaf4db9f round=0
+3565:Aug 18 17:00:44 [VALIDATOR_NODE] celestia-appd[1626644]: 5:00PM ERR failed to process message err="error adding vote" height=7043753 module=consensus msg_type=*consensus.VoteMessage peer=d2faee0c04be9a813223db1491c05843eaf4db9f round=0
+3567:Aug 18 17:00:44 [VALIDATOR_NODE] celestia-appd[1626644]: 5:00PM ERR failed to process message err="error adding vote" height=7043753 module=consensus msg_type=*consensus.VoteMessage peer=d2faee0c04be9a813223db1491c05843eaf4db9f round=0
+
+2. PEER CONNECTION ERRORS
+=========================
+6660:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR Stopping peer for error err="read tcp [INTERNAL_IP]:54924->185.135.81.50:31006: use of closed network connection" module=p2p peer="Peer{MConn{185.135.81.50:31006} 1fcfc74c1d32a49a59d545f23d3da838eb94dcc3 out}"
+6664:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR Stopping peer for error err="read tcp [INTERNAL_IP]:59490->65.108.44.149:40656: use of closed network connection" module=p2p peer="Peer{MConn{65.108.44.149:40656} 0da97b021da8d0920848d824dbb30fefb5101c96 out}"
+6670:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR Stopping peer for error err="read tcp [INTERNAL_IP]:46418->65.21.84.223:11656: use of closed network connection" module=p2p peer="Peer{MConn{65.21.84.223:11656} 0f7fea6ba71798a9daccf4c38622d8c97f747067 out}"
+6675:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR Stopping peer for error err="read tcp [INTERNAL_IP]:45094->154.60.100.64:27657: use of closed network connection" module=p2p peer="Peer{MConn{154.60.100.64:27657} 57307aa4cac3b00aace33d34fe0a7c52e290705f out}"
+6682:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR Stopping peer for error err="read tcp [INTERNAL_IP]:36354->5.9.89.67:15670: use of closed network connection" module=p2p peer="Peer{MConn{5.9.89.67:15670} b519fc0c69726b43de28b82f998c8db7faf9741d out}"
+
+3. NETWORK DIALING ERRORS
+=========================
+6786:Aug 18 17:33:24 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR Error dialing peer err="dial tcp 88.211.218.239:40656: connect: connection refused" module=p2p
+6793:Aug 18 17:33:24 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR Error dialing peer err="dial tcp 144.76.115.182:11656: connect: connection refused" module=p2p
+6795:Aug 18 17:33:24 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR Error dialing peer err="dial tcp 95.216.246.249:40656: connect: connection refused" module=p2p
+6799:Aug 18 17:33:24 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR Error dialing peer err="dial tcp 185.44.207.247:40656: connect: connection refused" module=p2p
+6803:Aug 18 17:33:25 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR Error dialing peer err="dial tcp 13.215.96.206:40656: i/o timeout" module=p2p
+
+4. RECONNECTION FAILURES
+=========================
+7605:Aug 18 17:35:31 [VALIDATOR_NODE] celestia-appd[1645834]: 5:35PM ERR Failed to reconnect to peer. Beginning exponential backoff addr=129f31ae84d154b3064fa7928ec9a04cad0a40cc@95.216.246.249:40656 elapsed=127237.644172 module=p2p
+7628:Aug 18 17:35:35 [VALIDATOR_NODE] celestia-appd[1645834]: 5:35PM ERR Failed to reconnect to peer. Beginning exponential backoff addr=40525a60a25ccaa7a2685acd058c4c7d3d9f95c5@144.76.115.182:11656 elapsed=131467.12059 module=p2p
+7632:Aug 18 17:35:36 [VALIDATOR_NODE] celestia-appd[1645834]: 5:35PM ERR Failed to reconnect to peer. Beginning exponential backoff addr=6ee545c2992a8201ce2ed68d73776695627595db@168.119.37.164:12056 elapsed=131021.682672 module=p2p
+7643:Aug 18 17:35:39 [VALIDATOR_NODE] celestia-appd[1645834]: 5:35PM ERR Failed to reconnect to peer. Beginning exponential backoff addr=f588002d4625e2eb4476ae8fc7ad43ae0e0d5669@185.183.35.22:40656 elapsed=132797.506544 module=p2p
+7653:Aug 18 17:35:40 [VALIDATOR_NODE] celestia-appd[1645834]: 5:35PM ERR Failed to reconnect to peer. Beginning exponential backoff addr=47e521b6089caf796dfa9c0d2423f66a4bd28f6e@185.44.207.247:40656 elapsed=135250.282907 module=p2p
+
+5. BLOCKSYNC ERRORS
+=====================
+6709:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR Error stopping pool err="already stopped" module=blocksync
+6876:Aug 18 17:33:27 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR failed to add block err="got an already committed block #7044129 (possibly from the slow peer 396673f9d0559a2ec8b44016ef591dee96831989)" module=blocksync peer="Peer{MConn{148.251.13.186:11656} 396673f9d0559a2ec8b44016ef591dee96831989 out}"
+6877:Aug 18 17:33:27 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR failed to add block err="got an already committed block #7044130 (possibly from the slow peer 396673f9d0559a2ec8b44016ef591dee96831989)" module=blocksync peer="Peer{MConn{148.251.13.186:11656} 396673f9d0559a2ec8b44016ef591dee96831989 out}"
+
+6. OTHER ERRORS
+===============
+6655:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR canceled grpc subscription. retrying module=rpc
+6731:Aug 18 17:33:02 [VALIDATOR_NODE] celestia-appd[1626644]: 5:33PM ERR snapshot failed; exporter error err="iavl export failed for version 7044000: leveldb: closed" module=server store=icahost
+6993:Aug 18 17:33:42 [VALIDATOR_NODE] celestia-appd[1645834]: 5:33PM ERR SendTimeout module=blocksync peer=396673f9d0559a2ec8b44016ef591dee96831989 reason="peer did not send us anything" timeout=15000
+7825:Aug 18 17:36:19 [VALIDATOR_NODE] celestia-appd[1645834]: 5:36PM ERR Connection failed @ sendRoutine conn=MConn{88.198.63.176:36656} err="pong timeout" module=p2p peer=162f4a82ae3d50edc4c09d23d29f3add6d203423@88.198.63.176:36656
+
+=== ERROR SUMMARY ===
+Total Errors Found:      911
+Unique Error Types:       81
